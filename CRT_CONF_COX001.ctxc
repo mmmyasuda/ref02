@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crtconfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">
+	<handlers>
+		<handler name="BBGO" class="BBGO" delayedpageimages="false" version="1">
+			<handlerprops>
+				<property name="Address1" value="localhost"/>
+				<property name="Address2" value="localhost"/>
+				<property name="BrokerCode" value="SSS"/>
+				<property name="CACertificateNameOfChannel1">
+				</property>
+				<property name="CACertificateNameOfChannel2">
+				</property>
+				<property name="CertificateNameOfChannel1">
+				</property>
+				<property name="CertificateNameOfChannel2">
+				</property>
+				<property name="CityCode" value="TKO"/>
+				<property name="Contex3CompatibilityMode" value="0"/>
+				<property name="DTPUpdates" value="-1"/>
+				<property name="EnableFTOLMsgForward" value="1"/>
+				<property name="EnableTLSv1.2" value="0"/>
+				<property name="KeyFileNameOfChannel1">
+				</property>
+				<property name="KeyFileNameOfChannel2">
+				</property>
+				<property name="PacketsBetweenACKs" value="7"/>
+				<property name="Port1" value="12345"/>
+				<property name="Port2" value="23456"/>
+				<property name="TimedRefreshHoldoffQueueSize" value="30"/>
+			</handlerprops>
+			<outputgate>
+				<property name="Enabled" value="false"/>
+			</outputgate>
+			<recordsets>
+				<recordset name="Dynamic record set" dynamic="true" dynamicfields="false" pagebased="false" dynamicpage="false" pagebuildbased="false" version="1">
+					<recordsetprops>
+						<property name="AbsolutePage" value="    "/>
+						<property name="AbsolutePageField">
+						</property>
+						<property name="AbsoluteRowField">
+						</property>
+						<property name="AccessType" value="08"/>
+						<property name="AccessTypeForBenchmark" value="  "/>
+						<property name="AddBlankRecord" value="0"/>
+						<property name="AlwaysSendSize" value="0"/>
+						<property name="BenchmarkDescription" value="                    "/>
+						<property name="BidAskPair" value="0"/>
+						<property name="ClearOnStartup" value="N"/>
+						<property name="ClearType" value="0"/>
+						<property name="CommentField" value="                              "/>
+						<property name="ConfigPriceClear" value="0"/>
+						<property name="ContributorID" value="0000"/>
+						<property name="CurrencyFlag" value="Y"/>
+						<property name="DefaultDynDest">
+						</property>
+						<property name="DynDest">
+							<property name="count" value="0"/>
+						</property>
+						<property name="DynDestField">
+						</property>
+						<property name="EnableGDCOHeaders" value="0"/>
+						<property name="ForceSendTradeDate" value="0"/>
+						<property name="ForegroundColor" value="02"/>
+						<property name="FunctionName" value="GDCO"/>
+						<property name="IRRELEVANTLoadType" value="02"/>
+						<property name="IdentifierType" value="4"/>
+						<property name="LMSMode" value="2"/>
+						<property name="LoadIndicator" value="M"/>
+						<property name="LoadOrderType2" value="0"/>
+						<property name="MonitorID">
+						</property>
+						<property name="MonitorNumber">
+						</property>
+						<property name="NoOfInstancesToFollow" value="01"/>
+						<property name="OddLotFlag" value=" "/>
+						<property name="PacketTypeID" value="  "/>
+						<property name="PageNo" value="    1"/>
+						<property name="PageTimestamp" value="0"/>
+						<property name="PageWithinMonitor" value="    "/>
+						<property name="PartialPacketsPerUpdate" value="3"/>
+						<property name="PartialUpdates" value="0"/>
+						<property name="Pkt13AttribChars">
+						</property>
+						<property name="Pkt14RecordType" value="01"/>
+						<property name="Pkt21FundType" value="1"/>
+						<property name="Pkt2RecordType" value="10"/>
+						<property name="ProductCode" value=" 0"/>
+						<property name="Reserved" value="      "/>
+						<property name="Reserved1" value="Y"/>
+						<property name="Reserved2" value="  "/>
+						<property name="Reserved3" value="  "/>
+						<property name="Row" value="  "/>
+						<property name="SecurityIdentifier" value="            "/>
+						<property name="SecurityIdentifierForBenchmark" value="            "/>
+						<property name="SecurityShortName" value="              "/>
+						<property name="SendClearHeaderPacket" value="0"/>
+						<property name="SendClose" value="1"/>
+						<property name="SendFirmPrices" value="0"/>
+						<property name="SendFirmPricesOff" value="1"/>
+						<property name="SendHigh" value="1"/>
+						<property name="SendLow" value="1"/>
+						<property name="SendNone" value="1"/>
+						<property name="SendOpen" value="1"/>
+						<property name="SendValidZeroFirmPrice" value="1"/>
+						<property name="SendValidZeroPrice" value="1"/>
+						<property name="SendVolumeCap" value="1"/>
+						<property name="SourceID" value="       "/>
+						<property name="SuppressDeleteAction" value="0"/>
+						<property name="SuppressEmptyTradeFields" value="0"/>
+						<property name="SuppressPrices" value=" "/>
+						<property name="TTL" value="0"/>
+						<property name="Time" value="        "/>
+						<property name="TimedRefreshPeriod" value="0"/>
+						<property name="Type" value="1"/>
+						<property name="UnPanic" value="0"/>
+						<property name="UseConfigPriceClear" value="0"/>
+						<property name="YellowKeyOverwrite" value=" "/>
+						<property name="ZeroSizesOnRemove" value="0"/>
+					</recordsetprops>
+					<outputgate>
+						<property name="Enabled" value="false"/>
+					</outputgate>
+					<recordsetsources>
+						<recordsetsource name="SRC_RMDSI_Dynamic record set" sourcehandler="RMDSI" sourcerecordset="Dynamic record set" dynrecnamesourcefield="REC_ID_1"/>
+					</recordsetsources>
+					<fields>
+						<field name="A" length="11" source="SRC_RMDSI_Dynamic record set" sourcefield="ASK2" alignment="L"/>
+						<field name="B" length="11" source="SRC_RMDSI_Dynamic record set" sourcefield="BID" alignment="L"/>
+					</fields>
+				</recordset>
+			</recordsets>
+		</handler>
+		<handler name="MKLO" class="MKLO" delayedpageimages="false" version="1">
+			<handlerprops>
+				<property name="AllowOverlengthRIC" value="0"/>
+				<property name="BcstMode" value="1"/>
+				<property name="ComConfig" value="9600,N,8,1"/>
+				<property name="ContributorID" value="JP12345"/>
+				<property name="ContributorIDSec">
+				</property>
+				<property name="DisableThrottling" value="1"/>
+				<property name="DualChannel" value="0"/>
+				<property name="EnableFullThrottle" value="0"/>
+				<property name="EnableOutputControl" value="0"/>
+				<property name="EnableRef700" value="0"/>
+				<property name="ForceImageOptimization" value="0"/>
+				<property name="HeavyLoading" value="1"/>
+				<property name="IDNPageCreditLimit" value="3500"/>
+				<property name="IDNPageCreditRate" value="2"/>
+				<property name="IDNRecdCreditLimit" value="750"/>
+				<property name="IDNRecdCreditRate" value="2"/>
+				<property name="InterCharTimeouts" value="1000"/>
+				<property name="MONPageCreditLimit" value="1500"/>
+				<property name="MONPageCreditRate" value="1"/>
+				<property name="NoOptimization" value="0"/>
+				<property name="NoResponseTimeout" value="3000"/>
+				<property name="RetryLimit" value="3"/>
+				<property name="SendSpaceForEmptyRec" value="1"/>
+				<property name="TCPIPPorts" value="1"/>
+				<property name="TwoByteCSI" value="1"/>
+				<property name="XonTimeout" value="60000"/>
+				<property name="listBackupPorts">
+				</property>
+				<property name="listPorts" value="172.16.220.3:10005"/>
+				<property name="listThrottleData">
+					<property name="Count" value="0"/>
+				</property>
+			</handlerprops>
+			<recordsets>
+				<recordset name="Dynamic record set" dynamic="true" dynamicfields="false" pagebased="false" dynamicpage="false" pagebuildbased="false" version="1">
+					<recordsetprops>
+						<property name="ForcePrimact1" value="0"/>
+						<property name="ForceSuffix" value="0"/>
+						<property name="ImageOptim" value="0"/>
+						<property name="NoOptim" value="1"/>
+						<property name="Suffix">
+						</property>
+						<property name="UseSuffix" value="0"/>
+					</recordsetprops>
+					<recordsetsources>
+						<recordsetsource name="SRC_RMDSI_Dynamic record set" sourcehandler="RMDSI" sourcerecordset="Dynamic record set" dynrecnamesourcefield="REC_ID_2"/>
+					</recordsetsources>
+					<fields>
+						<field name="ASK" length="10" source="SRC_RMDSI_Dynamic record set" sourcefield="ASK" alignment="L"/>
+						<field name="BID" length="10" source="SRC_RMDSI_Dynamic record set" sourcefield="BID" alignment="L"/>
+						<field name="PRIMACT_1" length="10" source="SRC_RMDSI_Dynamic record set" sourcefield="PRIMACT_1" alignment="L"/>
+						<field name="SEC_ACT_1" length="10" source="SRC_RMDSI_Dynamic record set" sourcefield="SEC_ACT_1" alignment="L"/>
+					</fields>
+				</recordset>
+			</recordsets>
+		</handler>
+		<handler name="RMDSI" class="RMDSI" delayedpageimages="false" version="1">
+			<handlerprops>
+				<property name="AcceptIncompletePartial" value="true"/>
+				<property name="AlternativeMFeedParsing" value="true"/>
+				<property name="ApplicationID">
+				</property>
+				<property name="ConfigurationDBLocation" value="E:\ContexConf\RMDSI-config.cfg"/>
+				<property name="ConvertFractionsInMFParsing" value="true"/>
+				<property name="DefaultServiceName" value="CONTEX"/>
+				<property name="EnableRMTESPassthrough" value="true"/>
+				<property name="ExpandEnumValues" value="false"/>
+				<property name="FTOLBehaviour" value="0"/>
+				<property name="Mode" value="1"/>
+				<property name="PartialUpdatePad" value="32"/>
+				<property name="Position">
+				</property>
+				<property name="RSSLDisableDuplicatesOptimization" value="false"/>
+				<property name="RSSLTimeAsMFeed" value="true"/>
+				<property name="ResubscriptionInterval" value="30"/>
+				<property name="SessionName" value="SrcSession"/>
+				<property name="SuppressEmptyInitialImage" value="true"/>
+				<property name="UseRegkeyConfiguration" value="false"/>
+				<property name="UserName">
+				</property>
+				<property name="ValidateValuesInMFParsing" value="true"/>
+			</handlerprops>
+			<chainimport>
+				<property name="Directory" value="C:\Users\Administrator\Desktop\ContexConf\ChainFile"/>
+				<property name="Enabled" value="true"/>
+			</chainimport>
+			<persistdata>
+				<property name="Enabled" value="true"/>
+			</persistdata>
+			<recordsets>
+				<recordset name="80x25 pages" dynamic="false" pagebased="true" dynamicpage="false" pagebuildbased="false" pagetype="Large - 80x25 Page" version="1">
+					<recordsetprops>
+						<property name="AutoResubscribe" value="false"/>
+						<property name="FieldNamePrefix" value="ROW80_"/>
+						<property name="PFSGenerateTimestamp" value="false"/>
+						<property name="PFSRecordPrefix">
+						</property>
+						<property name="PFSRecordSuffix">
+						</property>
+						<property name="PadRowNumbers" value="false"/>
+						<property name="ServiceName">
+						</property>
+					</recordsetprops>
+					<fields>
+						<field name="ROW01" length="80" row="1" col="1"/>
+						<field name="ROW02" length="80" row="2" col="1"/>
+						<field name="ROW03" length="80" row="3" col="1"/>
+						<field name="ROW04" length="80" row="4" col="1"/>
+						<field name="ROW05" length="80" row="5" col="1"/>
+						<field name="ROW06" length="80" row="6" col="1"/>
+						<field name="ROW07" length="80" row="7" col="1"/>
+						<field name="ROW08" length="80" row="8" col="1"/>
+						<field name="ROW09" length="80" row="9" col="1"/>
+						<field name="ROW10" length="80" row="10" col="1"/>
+						<field name="ROW11" length="80" row="11" col="1"/>
+						<field name="ROW12" length="80" row="12" col="1"/>
+						<field name="ROW13" length="80" row="13" col="1"/>
+						<field name="ROW14" length="80" row="14" col="1"/>
+						<field name="ROW15" length="80" row="15" col="1"/>
+						<field name="ROW16" length="80" row="16" col="1"/>
+						<field name="ROW17" length="80" row="17" col="1"/>
+						<field name="ROW18" length="80" row="18" col="1"/>
+						<field name="ROW19" length="80" row="19" col="1"/>
+						<field name="ROW20" length="80" row="20" col="1"/>
+						<field name="ROW21" length="80" row="21" col="1"/>
+						<field name="ROW22" length="80" row="22" col="1"/>
+						<field name="ROW23" length="80" row="23" col="1"/>
+						<field name="ROW24" length="80" row="24" col="1"/>
+						<field name="ROW25" length="80" row="25" col="1"/>
+					</fields>
+					<records>
+						<record name="ABC123"/>
+						<record name="LINKA"/>
+						<record name="LINKB"/>
+					</records>
+				</recordset>
+				<recordset name="Dynamic record set" dynamic="true" dynamicfields="false" pagebased="false" dynamicpage="false" pagebuildbased="false" version="1">
+					<recordsetprops>
+						<property name="AutoResubscribe" value="true"/>
+						<property name="ChainName">
+						</property>
+						<property name="ChainSamples" value="-1"/>
+						<property name="DynamicRecordSource" value="1"/>
+						<property name="ExpandEnumValues" value="false"/>
+						<property name="PollTimesSecs" value="-1"/>
+						<property name="PopulateAbsolutePageRow" value="false"/>
+						<property name="PopulateDynRecIndex" value="false"/>
+						<property name="RecordPrefix">
+						</property>
+						<property name="RecordSuffix">
+						</property>
+						<property name="RowsPerPage" value="-1"/>
+						<property name="ServiceName">
+						</property>
+						<property name="StartPage" value="-1"/>
+						<property name="StartRow" value="-1"/>
+						<property name="UseHandlerEnumFieldsSetting" value="true"/>
+					</recordsetprops>
+					<chainfileimport>
+						<property name="Enabled" value="true"/>
+						<property name="File" value="testOrg.chn"/>
+						<property name="IgnoreFirstRow" value="true"/>
+						<property name="NamesColumn" value="1"/>
+						<property name="UpdateOnFileChange" value="true"/>
+					</chainfileimport>
+					<fields>
+						<field name="ASK" length="10"/>
+						<field name="ASK2" length="11" calculated="true" derivedschedule="Field" formula="If( CompareExact(ASK, &quot;+0&quot;), SubstituteText( ASK, &quot;+&quot;, &quot;&quot;, 1), &quot;&quot;)"/>
+						<field name="BID" length="10"/>
+						<field name="GEN_TEXT16" length="10"/>
+						<field name="PRIMACT_1" length="10"/>
+						<field name="REC_ID_1" length="12"/>
+						<field name="REC_ID_2" length="12"/>
+						<field name="REC_ID_3" length="12"/>
+						<field name="SEC_ACT_1" length="10"/>
+					</fields>
+				</recordset>
+			</recordsets>
+		</handler>
+		<handler name="TRCO" class="TRCO" delayedpageimages="false" version="1">
+			<handlerprops>
+				<property name="AllowOverlengthRICNames" value="false"/>
+				<property name="AllowedRICs"/>
+				<property name="ApplicationTag" value="0"/>
+				<property name="ApplicationTagSecondary" value="0"/>
+				<property name="BinaryConfig" value="00000000"/>
+				<property name="CAPIIDNum" value="1"/>
+				<property name="CAPIIDNumSecondary" value="2"/>
+				<property name="CSLN" value="JP54644"/>
+				<property name="CSLNSecondary" value="JP54644"/>
+				<property name="EnableFullThrottle" value="false"/>
+				<property name="EnableHeavyLoad" value="true"/>
+				<property name="IPSecurityKey" value="q8t6n5gisedcxt7i9m2wvgpfewk"/>
+				<property name="IPSecurityKeySecondary" value="q8t6n5gisedcxt7i9m2wvgpfewk"/>
+				<property name="LogicalRICLowCreditPoolPercent" value="20"/>
+				<property name="SessionHost" value="stc01.cfi.session.rservices.com"/>
+				<property name="SessionPort" value="10240"/>
+			</handlerprops>
+			<outputgate>
+				<property name="Enabled" value="false"/>
+			</outputgate>
+			<recordsets>
+				<recordset name="80x25 pages" dynamic="false" pagebased="true" dynamicpage="false" pagebuildbased="false" pagetype="Large - 80x25 Page" version="1">
+					<recordsetprops>
+						<property name="ApplySuffix" value="false"/>
+						<property name="DisableGateOpenOptimisation" value="false"/>
+						<property name="DisableOptimisation" value="false"/>
+						<property name="EnableFieldGrouping" value="false"/>
+						<property name="ForcePRIMACT_1" value="false"/>
+						<property name="ForceSuffix" value="false"/>
+						<property name="GroupedFields">
+						</property>
+						<property name="OptimiseInitialImage" value="true"/>
+						<property name="PageBinaryConfig" value="00000000"/>
+						<property name="RecsetBinaryConfig" value="00000000"/>
+						<property name="SendTerminiationSequence" value="false"/>
+						<property name="Suffix">
+						</property>
+					</recordsetprops>
+					<recordsetsources>
+						<recordsetsource name="SRC_RMDSI_80x25 pages" sourcehandler="RMDSI" sourcerecordset="80x25 pages"/>
+					</recordsetsources>
+					<fields>
+						<field name="ROW01" length="80" row="1" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW01" alignment="L"/>
+						<field name="ROW02" length="80" row="2" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW02" alignment="L"/>
+						<field name="ROW03" length="80" row="3" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW03" alignment="L"/>
+						<field name="ROW04" length="80" row="4" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW04" alignment="L"/>
+						<field name="ROW05" length="80" row="5" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW05" alignment="L"/>
+						<field name="ROW06" length="80" row="6" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW06" alignment="L"/>
+						<field name="ROW07" length="80" row="7" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW07" alignment="L"/>
+						<field name="ROW08" length="80" row="8" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW08" alignment="L"/>
+						<field name="ROW09" length="80" row="9" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW09" alignment="L"/>
+						<field name="ROW10" length="80" row="10" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW10" alignment="L"/>
+						<field name="ROW11" length="80" row="11" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW11" alignment="L"/>
+						<field name="ROW12" length="80" row="12" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW12" alignment="L"/>
+						<field name="ROW13" length="80" row="13" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW13" alignment="L"/>
+						<field name="ROW14" length="80" row="14" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW14" alignment="L"/>
+						<field name="ROW15" length="80" row="15" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW15" alignment="L"/>
+						<field name="ROW16" length="80" row="16" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW16" alignment="L"/>
+						<field name="ROW17" length="80" row="17" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW17" alignment="L"/>
+						<field name="ROW18" length="80" row="18" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW18" alignment="L"/>
+						<field name="ROW19" length="80" row="19" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW19" alignment="L"/>
+						<field name="ROW20" length="80" row="20" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW20" alignment="L"/>
+						<field name="ROW21" length="80" row="21" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW21" alignment="L"/>
+						<field name="ROW22" length="80" row="22" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW22" alignment="L"/>
+						<field name="ROW23" length="80" row="23" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW23" alignment="L"/>
+						<field name="ROW24" length="80" row="24" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW24" alignment="L"/>
+						<field name="ROW25" length="80" row="25" col="1" source="SRC_RMDSI_80x25 pages" sourcefield="ROW25" alignment="L"/>
+					</fields>
+					<records>
+						<record name="ABC123">
+							<recordsource source="SRC_RMDSI_80x25 pages" record="ABC123"/>
+						</record>
+						<record name="LINKA">
+							<recordsource source="SRC_RMDSI_80x25 pages" record="LINKA"/>
+						</record>
+						<record name="LINKB">
+							<recordsource source="SRC_RMDSI_80x25 pages" record="LINKB"/>
+						</record>
+					</records>
+				</recordset>
+				<recordset name="Dynamic record set" dynamic="true" dynamicfields="false" pagebased="false" dynamicpage="false" pagebuildbased="false" version="1">
+					<recordsetprops>
+						<property name="ApplySuffix" value="false"/>
+						<property name="DisableGateOpenOptimisation" value="false"/>
+						<property name="DisableOptimisation" value="false"/>
+						<property name="EnableFieldGrouping" value="false"/>
+						<property name="ForcePRIMACT_1" value="false"/>
+						<property name="ForceSuffix" value="false"/>
+						<property name="GroupedFields">
+						</property>
+						<property name="OptimiseInitialImage" value="true"/>
+						<property name="PageBinaryConfig" value="00000000"/>
+						<property name="RecsetBinaryConfig" value="00000000"/>
+						<property name="SendTerminiationSequence" value="false"/>
+						<property name="Suffix">
+						</property>
+					</recordsetprops>
+					<residual>
+						<property name="Enabled" value="true"/>
+						<property name="Filter" value="Logical"/>
+					</residual>
+					<outputgate>
+						<property name="Enabled" value="false"/>
+					</outputgate>
+					<recordsetsources>
+						<recordsetsource name="SRC_RMDSI_Dynamic record set" sourcehandler="RMDSI" sourcerecordset="Dynamic record set"/>
+					</recordsetsources>
+					<fields>
+						<field name="ASK" length="11" source="SRC_RMDSI_Dynamic record set" sourcefield="ASK" alignment="L"/>
+						<field name="BID" length="11" source="SRC_RMDSI_Dynamic record set" sourcefield="BID" alignment="L"/>
+						<field name="GEN_TEXT16" length="16" source="SRC_RMDSI_Dynamic record set" sourcefield="GEN_TEXT16" alignment="L"/>
+						<field name="PRIMACT_1" length="11" source="SRC_RMDSI_Dynamic record set" sourcefield="PRIMACT_1" alignment="L"/>
+						<field name="SEC_ACT_1" length="11" source="SRC_RMDSI_Dynamic record set" sourcefield="SEC_ACT_1" alignment="L"/>
+					</fields>
+				</recordset>
+			</recordsets>
+		</handler>
+	</handlers>
+</crtconfig>
